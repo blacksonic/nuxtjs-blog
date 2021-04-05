@@ -2,9 +2,7 @@
   <div class="main-wrapper">
     <section class="cta-section theme-bg-light py-5">
       <div class="container text-center">
-        <h2 class="heading">
-          VuesomeDev - A blog about Javascript focused on Vue.js and Node.js
-        </h2>
+        <h2 class="heading">Articles</h2>
       </div>
     </section>
 
@@ -34,36 +32,33 @@
                 >Read more &rarr;</NuxtLink
               >
             </div>
-            <!--//media-body-->
           </div>
-          <!--//media-->
         </div>
 
-        <nav v-if="morePages" class="blog-nav nav nav-justified my-5">
+        <nav class="blog-nav nav nav-justified my-5">
           <NuxtLink
-            to="/articles/page/2"
+            v-if="notFirstPage"
+            :to="'/articles/page/' + (page - 1)"
+            class="nav-link-prev nav-item nav-link rounded-left"
+            >Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i
+          ></NuxtLink>
+          <NuxtLink
+            v-if="morePages"
+            :to="'/articles/page/' + (page + 1)"
             class="nav-link-next nav-item nav-link rounded"
             >Next<i class="arrow-next fas fa-long-arrow-alt-right"></i
           ></NuxtLink>
         </nav>
       </div>
     </section>
-
-    <footer class="footer text-center py-2 theme-bg-dark">
-      <small class="copyright"
-        >Designed by
-        <a href="http://themes.3rdwavemedia.com" target="_blank"
-          >Xiaoying Riley</a
-        ></small
-      >
-    </footer>
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData({ $content, error }) {
+  async asyncData({ $content, params, error }) {
     try {
+      const page = parseInt(params.page, 10)
       const perPage = 3
       const articles = await $content('articles')
         .only([
@@ -76,18 +71,20 @@ export default {
           'ago',
         ])
         .sortBy('published_at', 'desc')
+        .skip(perPage * (page - 1))
         .limit(perPage)
         .fetch()
-
       const moreArticles = await $content('articles')
         .only(['slug'])
         .sortBy('published_at', 'desc')
-        .skip(perPage)
+        .skip(perPage * page)
         .limit(perPage)
         .fetch()
 
       return {
         articles,
+        page,
+        notFirstPage: page > 1,
         morePages: moreArticles.length > 0,
       }
     } catch (err) {
@@ -95,6 +92,11 @@ export default {
         statusCode: 404,
         message: 'Page could not be found',
       })
+    }
+  },
+  head() {
+    return {
+      title: 'Articles - VuesomeDev',
     }
   },
 }
