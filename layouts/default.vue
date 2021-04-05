@@ -33,7 +33,7 @@
             <!--//bio-->
             <ul class="social-list list-inline py-3 mx-auto">
               <li class="list-inline-item">
-                <a href="https://twitter.com/blacksonic86"
+                <a href="https://twitter.com/vuesomedev"
                   ><font-awesome-icon :icon="['fab', 'twitter']"
                 /></a>
               </li>
@@ -48,12 +48,12 @@
                 /></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://dev.to/blacksonic"
+                <a href="https://dev.to/vuesomedev"
                   ><font-awesome-icon :icon="['fab', 'dev']"
                 /></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://medium.com/@blacksonic86"
+                <a href="https://medium.com/@vuesomedev"
                   ><font-awesome-icon :icon="['fab', 'medium']"
                 /></a>
               </li>

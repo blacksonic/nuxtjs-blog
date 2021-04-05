@@ -64,7 +64,7 @@
 export default {
   async asyncData({ $content, error }) {
     try {
-      const perPage = 3
+      const perPage = 4
       const articles = await $content('articles')
         .only([
           'title',
