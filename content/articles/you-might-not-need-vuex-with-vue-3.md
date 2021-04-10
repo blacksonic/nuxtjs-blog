@@ -4,7 +4,7 @@ published_at: 2020-07-13
 description: Vuex is an awesome state management library. It's simple and integrates well with Vue. Why would anyone leave Vuex in Vue 3?
 tags: vue, javascript, webdev
 cover_image: you-might-not-need-vuex-with-vue-3/header.png
-canonical_url: https://dev.to/blacksonic/you-might-not-need-vuex-with-vue-3-52e4
+canonical_url: https://dev.to/vuesomedev/you-might-not-need-vuex-with-vue-3-52e4
 ---
 
 Vuex is an awesome state management library. It's simple and integrates well with Vue. Why would anyone leave Vuex? The reason can be that the upcoming Vue 3 release exposes the underlying reactivity system and introduces new ways of how you can structure your application. The new reactivity system is so powerful that it can be used for centralized state management.

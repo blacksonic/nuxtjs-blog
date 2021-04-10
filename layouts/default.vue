@@ -43,7 +43,7 @@
                 /></a>
               </li>
               <li class="list-inline-item">
-                <a href="https://github.com/blacksonic"
+                <a href="https://github.com/vuesomedev"
                   ><font-awesome-icon :icon="['fab', 'github']"
                 /></a>
               </li>

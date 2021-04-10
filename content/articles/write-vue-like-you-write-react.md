@@ -4,7 +4,7 @@ published_at: 2021-02-01
 description: With the Vue 3 Composition API, you can write functional components. What happens if we write them with JSX templates? Are they similar to React functional components?
 tags: react, vue, javascript
 cover_image: write-vue-like-you-write-react/header.png
-canonical_url: https://dev.to/blacksonic/write-vue-like-you-write-react-23p9
+canonical_url: https://dev.to/vuesomedev/write-vue-like-you-write-react-23p9
 ---
 
 With the Vue 3 Composition API, you can write functional components. It's possible also with React, but React has different templating: JSX. What happens if we write Vue functional components with JSX templates? Are they similar to React functional components?

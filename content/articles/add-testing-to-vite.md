@@ -6,7 +6,7 @@ tags: vue, testing, javascript
 cover_image: add-testing-to-vite/header.png
 cover_image_author: Liam Shaw
 cover_image_link: https://unsplash.com/@churrbroskii
-canonical_url: https://dev.to/blacksonic/add-testing-to-vite-4b75
+canonical_url: https://dev.to/vuesomedev/add-testing-to-vite-4b75
 ---
 
 [Vite](https://vitejs.dev/) is the brand new development server created by [Evan You](https://twitter.com/youyuxi). It's framework agnostic and incredibly fast thanks to native [ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) instead of bundling. Vite has a starter template for Vue applications. The template has the tooling for development and production deployment; only one is missing: testing. This tutorial shows you how to add unit and end-to-end testing to a newly generated Vue 3 Vite project.

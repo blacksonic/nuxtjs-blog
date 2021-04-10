@@ -4,7 +4,7 @@ published_at: 2020-05-18
 description: The release of Vue 3 is just around the corner. A faster, smaller and more maintainable version is coming with exciting additive features.
 tags: vue, javascript, tutorial
 cover_image: the-vue-3-upgrade-guide/header.png
-series: Byte-sized Vue 3
+canonical_url: https://dev.to/vuesomedev/the-vue-3-upgrade-guide-4dc4
 ---
 
 The release of Vue 3 is just around the corner. We can expect a faster, smaller, more maintainable version with a lot of new exciting features. Mostly these are additions and improvements over the existing API.
