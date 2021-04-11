@@ -13,11 +13,11 @@ In this article, we will be building a movie search application using the Compos
 
 When we finish, we will see something similar to this:
 
-<content-img src="build-a-movie-search-app-using-the-vue-composition-api/final-application.jpeg" alt="Final Application" class="img-fluid"></content-img>
+<content-img src="build-a-movie-search-app-using-the-vue-composition-api/final-application.jpeg" alt="Final Application"></content-img>
 
 The application will be able to search for movies via the [Open Movie Database API](http://www.omdbapi.com/apikey.aspx) and render the results. The reason for building this application is that it is simple enough not to distract the focus from learning the new API but complex enough to show it works.
 
-If you are not interested in the explanations, you can head straight to [the source code](https://github.com/blacksonic/movie-search-vue) and [the final application](https://codesandbox.io/s/github/blacksonic/movie-search-vue).
+If you are not interested in the explanations, you can head straight to [the source code](https://github.com/vuesomedev/movie-search-vue) and [the final application](https://codesandbox.io/s/github/blacksonic/movie-search-vue).
 
 ### Setting up the project
 
@@ -32,11 +32,11 @@ npm run serve
 
 Our application is now running on [http://localhost:8080](http://localhost:8080/) and looks like this:
 
-<content-img src="build-a-movie-search-app-using-the-vue-composition-api/generated-application.png" alt="Generated Application" class="img-fluid"></content-img>
+<content-img src="build-a-movie-search-app-using-the-vue-composition-api/generated-application.png" alt="Generated Application"></content-img>
 
 Here you can see the default folder structure:
 
-<content-img src="build-a-movie-search-app-using-the-vue-composition-api/default-folder-structure.png" alt="Default Folder Structure" class="img-fluid"></content-img>
+<content-img src="build-a-movie-search-app-using-the-vue-composition-api/default-folder-structure.png" alt="Default Folder Structure"></content-img>
 
 If you don't want to install all the dependencies on your local computer, you can also start the project on [Codesandbox](https://codesandbox.io/). Codesandbox has perfect starter projects for the most significant frameworks, [including Vue](https://codesandbox.io/s/vue).
 

@@ -26,15 +26,15 @@ Installing the plugin upgrades the packages `vue`, `vuex`, `vue-router`, `eslint
 
 Let's look at what has changed in the code. The first thing you notice is that the main Vue package no longer has a default export.
 
-<content-img src="the-vue-3-upgrade-guide/entrypoint-upgrade.jpeg" alt="Entrypoint Upgrade" class="img-fluid"></content-img>
+<content-img src="the-vue-3-upgrade-guide/entrypoint-upgrade.jpeg" alt="Entrypoint Upgrade"></content-img>
 
 The named export `createApp` creates a new Vue application as it did with the constructor in Vue 2. The plugin setup moves to the application instance with the `use` method instead of the constructor's parameter. The `$mount` method loses its dollar sign but behaves the same way.
 
-<content-img src="the-vue-3-upgrade-guide/store-upgrade.jpeg" alt="Store Upgrade" class="img-fluid"></content-img>
+<content-img src="the-vue-3-upgrade-guide/store-upgrade.jpeg" alt="Store Upgrade"></content-img>
 
 As you have seen with the application, plugins adopt the factory pattern: no more constructor with the `new` keyword. Instead of calling `new Vuex.Store`, the `createStore` factory method is needed. Passing the store's default export as a plugin is no longer possible.
 
-<content-img src="the-vue-3-upgrade-guide/router-upgrade.jpeg" alt="Router Upgrade" class="img-fluid"></content-img>
+<content-img src="the-vue-3-upgrade-guide/router-upgrade.jpeg" alt="Router Upgrade"></content-img>
 
 The router plugin follows the same pattern: `new VueRouter` becomes a call to `createRouter`, and the global plugin setup must be left. In the new version, you always have to define the type of history. You can choose from `createWebHashHistory`, `createMemoryHistory` and `createWebHistory`.
 
@@ -50,7 +50,7 @@ Without the CLI, you have to upgrade `vue-loader` or `rollup-plugin-vue` to the 
 
 ### Online playground
 
-If you don't want to modify your project but interested in trying out the new version, just try [this online playground](https://github.com/blacksonic/vue-3-playground).
+If you don't want to modify your project but interested in trying out the new version, just try [this online playground](https://github.com/vuesomedev/vue-3-playground).
 
 ### Summary
 

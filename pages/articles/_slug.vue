@@ -5,8 +5,8 @@
         <header class="blog-post-header">
           <h2 class="title mb-2">{{ article.title }}</h2>
           <div class="meta mb-3">
-            <span class="date">Published {{ article.ago }}</span
-            ><span class="time">{{ article.readingTime }}</span>
+            <span class="date">Published {{ article.ago }}</span>
+            <span class="time">{{ article.readingTime }}</span>
           </div>
         </header>
 
@@ -15,7 +15,6 @@
             <content-img
               :src="article.cover_image"
               :alt="article.title"
-              class="img-fluid"
             ></content-img>
 
             <figcaption
@@ -23,9 +22,9 @@
               class="mt-2 text-center image-caption"
             >
               Image Credit:
-              <a :href="article.cover_image_link" target="_blank">{{
-                article.cover_image_author
-              }}</a>
+              <a :href="article.cover_image_link" target="_blank">
+                {{ article.cover_image_author }}
+              </a>
             </figcaption>
           </figure>
 
@@ -40,19 +39,29 @@
           </p>
         </div>
 
-        <nav v-if="prev || next" class="blog-nav nav nav-justified my-5">
+        <nav v-if="previous || next" class="blog-nav nav nav-justified my-5">
           <NuxtLink
-            v-if="prev"
-            :to="'/articles/' + prev.slug"
+            v-if="previous"
+            :to="'/articles/' + previous.slug"
             class="nav-link-prev nav-item nav-link rounded-left"
-            >Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i
-          ></NuxtLink>
+          >
+            Previous
+            <font-awesome-icon
+              :icon="['fas', 'long-arrow-alt-left']"
+              class="arrow-prev"
+            />
+          </NuxtLink>
           <NuxtLink
             v-if="next"
             :to="'/articles/' + next.slug"
             class="nav-link-next nav-item nav-link rounded-right"
-            >Next<i class="arrow-next fas fa-long-arrow-alt-right"></i
-          ></NuxtLink>
+          >
+            Next
+            <font-awesome-icon
+              :icon="['fas', 'long-arrow-alt-right']"
+              class="arrow-next"
+            />
+          </NuxtLink>
         </nav>
       </div>
     </article>
@@ -60,17 +69,19 @@
 </template>
 
 <script>
+import { createApi } from '~/lib/api'
+
 export default {
   async asyncData({ $content, params, error }) {
-    try {
-      const article = await $content('articles', params.slug).fetch()
-      const [prev, next] = await $content('articles')
-        .only(['slug'])
-        .sortBy('published_at', 'desc')
-        .surround(params.slug)
-        .fetch()
+    const { getArticle, getSorroundingArticle } = createApi({
+      $content,
+    })
 
-      return { article, prev, next }
+    try {
+      const article = await getArticle(params.slug)
+      const { previous, next } = await getSorroundingArticle(params.slug)
+
+      return { article, previous, next }
     } catch (err) {
       error({
         statusCode: 404,

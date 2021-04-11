@@ -76,7 +76,7 @@ export const provideState = () => provide(stateSymbol, createState())
 
 When you pass a `Symbol` as key and a value to the `provide` method, that value will be available for any child component through the `inject` method. The key is using the same `Symbol` name when providing and retrieving the value.
 
-<content-img src="you-might-not-need-vuex-with-vue-3/provide-inject.png" alt="Provide Inject" class="img-fluid"></content-img>
+<content-img src="you-might-not-need-vuex-with-vue-3/provide-inject.png" alt="Provide Inject"></content-img>
 
 This way, if you provide the value on the uppermost component, it'll be available in all the components. Alternatively, you can also call `provide` on the main application instance.
 
@@ -131,4 +131,4 @@ We have a state object that is readonly and is reactive to changes in templates.
 
 Vuex has more features like module handling, but sometimes we don't need that.
 
-If You want to have a look at Vue 3 and try out this state management approach, take a look at my [Vue 3 Playground](https://github.com/blacksonic/vue-3-playground).
+If You want to have a look at Vue 3 and try out this state management approach, take a look at my [Vue 3 Playground](https://github.com/vuesomedev/vue-3-playground).

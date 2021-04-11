@@ -74,4 +74,4 @@ Both framework can create a component with a single function. The Vue functional
 
 The difference lies in the way how each framework solves the problem of reactivity: React is the stateless reference comparing solution, Vue is the stateful Proxy based solution.
 
-It was an interesting and fun experiment to try to write the same component in different frameworks with similar approach as identically as possible. I hope you find it also interesting. You can also give it a try in my [Vue 3 Vite playground](https://github.com/blacksonic/vue-3-playground).
+It was an interesting and fun experiment to try to write the same component in different frameworks with similar approach as identically as possible. I hope you find it also interesting. You can also give it a try in my [Vue 3 Vite playground](https://github.com/vuesomedev/vue-3-playground).

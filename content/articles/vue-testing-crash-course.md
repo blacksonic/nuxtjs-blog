@@ -11,13 +11,13 @@ You have nearly finished your project, and only one feature is left. You impleme
 
 In this tutorial, I'll show you how to write unit, integration and end-to-end tests for Vue applications.
 
-For more test examples, you can take a look at my [Vue TodoApp implementation](https://github.com/blacksonic/todoapp-vue).
+For more test examples, you can take a look at my [Vue TodoApp implementation](https://github.com/vuesomedev/todomvc-vue).
 
 ### 1. Types
 
 Tests have three types: unit, integration and end-to-end. These test types are often visualized as a pyramid.
 
-<content-img src="vue-testing-crash-course/testing-pyramid.png" alt="Testing Pyramid" class="img-fluid"></content-img>
+<content-img src="vue-testing-crash-course/testing-pyramid.png" alt="Testing Pyramid"></content-img>
 
 The pyramid indicates that tests on the lower levels are cheaper to write, faster to run and easier to maintain. Why don't we write only unit tests then? Because tests on the upper end give us more confidence about the system and they check if the components play well together.
 
@@ -27,7 +27,7 @@ To summarize the difference between the types of tests: unit tests only work wit
 
 For new projects, the easiest way to add testing to your project is through the [Vue CLI](https://cli.vuejs.org/). When generating the project (`vue create myapp`), you have to manually select Unit Testing and E2E Testing.
 
-<content-img src="vue-testing-crash-course/vue-cli.png" alt="Vue CLI" class="img-fluid"></content-img>
+<content-img src="vue-testing-crash-course/vue-cli.png" alt="Vue CLI"></content-img>
 
 When the installation is finished, multiple additional dependencies will appear in your `package.json` file:
 

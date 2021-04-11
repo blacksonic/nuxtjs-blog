@@ -9,83 +9,39 @@
     <section class="blog-list px-3 py-5 p-md-5">
       <div class="container">
         <div v-for="article in articles" :key="article.slug" class="item mb-5">
-          <div class="media">
-            <NuxtLink :to="'/articles/' + article.slug">
-              <content-img
-                :src="article.cover_image"
-                :alt="article.title"
-                class="mr-3 img-fluid post-thumb d-none d-md-flex"
-              ></content-img>
-            </NuxtLink>
-            <div class="media-body">
-              <h3 class="title mb-1">
-                <NuxtLink :to="'/articles/' + article.slug">{{
-                  article.title
-                }}</NuxtLink>
-              </h3>
-              <div class="meta mb-1">
-                <span class="date">Published {{ article.ago }}</span
-                ><span class="time">{{ article.readingTime }}</span>
-              </div>
-              <div class="intro">{{ article.description }}</div>
-              <NuxtLink :to="'/articles/' + article.slug" class="more-link"
-                >Read more &rarr;</NuxtLink
-              >
-            </div>
-          </div>
+          <article-list-item :article="article"></article-list-item>
         </div>
 
-        <nav class="blog-nav nav nav-justified my-5">
-          <NuxtLink
-            v-if="notFirstPage"
-            :to="'/articles/page/' + (page - 1)"
-            class="nav-link-prev nav-item nav-link rounded-left"
-            >Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i
-          ></NuxtLink>
-          <NuxtLink
-            v-if="morePages"
-            :to="'/articles/page/' + (page + 1)"
-            class="nav-link-next nav-item nav-link rounded"
-            >Next<i class="arrow-next fas fa-long-arrow-alt-right"></i
-          ></NuxtLink>
-        </nav>
+        <article-list-footer
+          :page="page"
+          :previous="previous"
+          :next="next"
+        ></article-list-footer>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import { createApi } from '~/lib/api'
+
 export default {
   async asyncData({ $content, params, error }) {
+    const { getArticles, hasMoreArticles, hasLessArticles } = createApi({
+      $content,
+    })
+
     try {
       const page = parseInt(params.page, 10)
-      const perPage = 4
-      const articles = await $content('articles')
-        .only([
-          'title',
-          'description',
-          'cover_image',
-          'slug',
-          'readingTime',
-          'published_at',
-          'ago',
-        ])
-        .sortBy('published_at', 'desc')
-        .skip(perPage * (page - 1))
-        .limit(perPage)
-        .fetch()
-      const moreArticles = await $content('articles')
-        .only(['slug'])
-        .sortBy('published_at', 'desc')
-        .skip(perPage * page)
-        .limit(perPage)
-        .fetch()
+      const articles = await getArticles(page)
+      const next = await hasMoreArticles(page)
+      const previous = hasLessArticles(page)
 
       return {
         articles,
         page,
-        notFirstPage: page > 1,
-        morePages: moreArticles.length > 0,
+        previous,
+        next,
       }
     } catch (err) {
       error({

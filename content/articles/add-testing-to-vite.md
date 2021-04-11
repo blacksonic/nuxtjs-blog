@@ -21,11 +21,11 @@ npm init @vitejs/app my-vite-app --template vue-ts
 
 The above command creates a Vue 3 Typescript application into the `my-vite-app` folder. The folder structure will look like this.
 
-<content-img src="add-testing-to-vite/folder-structure.png" alt="Folder Structure" class="img-fluid"></content-img>
+<content-img src="add-testing-to-vite/folder-structure.png" alt="Folder Structure"></content-img>
 
 We have a `HelloWorld` component in the `src/components/HelloWorld.vue` file that displays the header on the page "Hello Vue 3 + TypeScript + Vite". This component receives the header text a `prop` input named `msg`. We'll write a test against this component whether it displays the same message as what we give as input.
 
-<content-img src="add-testing-to-vite/application.png" alt="Application" class="img-fluid"></content-img>
+<content-img src="add-testing-to-vite/application.png" alt="Application"></content-img>
 
 ### Unit test
 
@@ -101,7 +101,7 @@ Finally, add the script to `package.json`, and after that, we can run the tests 
 
 And here it is the result of our first unit test, beautiful green, and passing.
 
-<content-img src="add-testing-to-vite/jest-output.png" alt="Jest Output" class="img-fluid"></content-img>
+<content-img src="add-testing-to-vite/jest-output.png" alt="Jest Output"></content-img>
 
 ### E2E test
 
@@ -175,10 +175,10 @@ One piece is left to create the script command in `package.json` to run the test
 
 If we run the above script, we get passing shiny green end-to-end test results.
 
-<content-img src="add-testing-to-vite/cypress-output.png" alt="Cypress Output" class="img-fluid"></content-img>
+<content-img src="add-testing-to-vite/cypress-output.png" alt="Cypress Output"></content-img>
 
 ### Summary
 
 Vite is a great development server, but its templates lack testing solutions. We have to add them manually. Jest and Cypress offer straightforward scenarios to fill in this gap. We can also swap them to similar libraries like Mocha, Jasmine, and Puppeteer. After this article, I hope the lack of out-of-the-box testing with Vite doesn't hold back anyone from using it.
 
-If you don't want to set up everything manually, you can use my [Vue 3 Playground](https://github.com/blacksonic/vue-3-playground) as a starter.
+If you don't want to set up everything manually, you can use my [Vue 3 Playground](https://github.com/vuesomedev/vue-3-playground) as a starter.

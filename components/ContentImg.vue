@@ -1,5 +1,5 @@
 <template>
-  <img :src="imgSrc()" :alt="alt" />
+  <img class="img-fluid" :src="imgSrc()" :alt="alt" />
 </template>
 
 <script>
