@@ -3,7 +3,7 @@ title: Add testing to Vite
 published_at: 2021-02-23
 description: Making Vite, the brand new incredibly fast development server for Vue 3, whole with unit and end-to-end testing
 tags: vue, testing, javascript
-cover_image: add-testing-to-vite/header.png
+cover_image: add-testing-to-vite/header.jpg
 cover_image_author: Liam Shaw
 cover_image_link: https://unsplash.com/@churrbroskii
 canonical_url: https://dev.to/vuesomedev/add-testing-to-vite-4b75

@@ -3,7 +3,9 @@ title: The Vue 3 upgrade guide
 published_at: 2020-05-18
 description: The release of Vue 3 is just around the corner. A faster, smaller and more maintainable version is coming with exciting additive features.
 tags: vue, javascript, tutorial
-cover_image: the-vue-3-upgrade-guide/header.png
+cover_image: the-vue-3-upgrade-guide/header.jpg
+cover_image_author: Ivan Bandura
+cover_image_link: https://unsplash.com/@unstable_affliction
 canonical_url: https://dev.to/vuesomedev/the-vue-3-upgrade-guide-4dc4
 ---
 
