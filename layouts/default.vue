@@ -6,7 +6,7 @@
       </h1>
 
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <div id="navigation" class="collapse navbar-collapse flex-column">
+        <div id="navigation" class="collapse show navbar-collapse flex-column">
           <div class="profile-section pt-3 pt-lg-0">
             <img
               class="profile-image mb-3 rounded-circle mx-auto"
