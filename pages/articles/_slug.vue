@@ -117,6 +117,16 @@ export default {
           property: 'og:description',
           content: this.article.description,
         },
+        {
+          hid: 'twittertitle',
+          property: 'twitter:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'twitterdescription',
+          property: 'twitter:description',
+          content: this.article.description,
+        },
       ],
     }
   },
