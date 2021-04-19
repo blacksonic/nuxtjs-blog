@@ -63,6 +63,10 @@
             />
           </NuxtLink>
         </nav>
+
+        <div class="blog-comments-section">
+          <Disqus />
+        </div>
       </div>
     </article>
   </div>
