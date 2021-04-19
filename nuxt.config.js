@@ -2,6 +2,10 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
 
+const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
+const title = 'VuesomeDev'
+const description = `${title} - A blog about Javascript focused on Vue.js and Node.js`
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -10,7 +14,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'VuesomeDev',
+    title,
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,11 +24,39 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'VuesomeDev - A blog about Javascript focused on Vue.js and Node.js',
+        content: description,
       },
+      {
+        hid: 'ogtype',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'ogurl',
+        property: 'og:url',
+        content: baseUrl,
+      },
+      {
+        hid: 'ogtitle',
+        property: 'og:title',
+        content: title,
+      },
+      {
+        hid: 'ogdescription',
+        property: 'og:description',
+        content: description,
+      },
+      // {
+      //   hid: 'og:image',
+      //   property: 'og:image',
+      //   content: baseUrl,
+      // },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+
+  env: {
+    baseUrl,
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

@@ -95,11 +95,26 @@ export default {
   },
   head() {
     return {
-      title: this.article.title + ' - VuesomeDev',
+      title: this.article.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
+          content: this.article.description,
+        },
+        {
+          hid: 'ogurl',
+          property: 'og:url',
+          content: process.env.baseUrl + this.$nuxt.$route.path,
+        },
+        {
+          hid: 'ogtitle',
+          property: 'og:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'ogdescription',
+          property: 'og:description',
           content: this.article.description,
         },
       ],
