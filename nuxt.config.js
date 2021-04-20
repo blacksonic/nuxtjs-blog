@@ -77,6 +77,7 @@ export default {
 
   env: {
     baseUrl,
+    disqusName: process.env.DISQUS_NAME || '',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -98,7 +99,7 @@ export default {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'UA-194404646-1',
+        id: process.env.GOOGLE_ANALYTICS_ID || '',
       },
     ],
   ],
