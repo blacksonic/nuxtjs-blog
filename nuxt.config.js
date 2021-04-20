@@ -46,30 +46,20 @@ export default {
         property: 'og:description',
         content: description,
       },
-      // {
-      //   hid: 'og:image',
-      //   property: 'og:image',
-      //   content: baseUrl,
-      // },
       {
         hid: 'twittercard',
         property: 'twitter:card',
-        content: 'summary_large_image',
+        content: 'summary',
+      },
+      {
+        hid: 'twittercreator',
+        property: 'twitter:creator',
+        content: process.env.TWITTER_USERNAME || '',
       },
       {
         hid: 'twittersite',
         property: 'twitter:site',
         content: baseUrl,
-      },
-      {
-        hid: 'twittertitle',
-        property: 'twitter:title',
-        content: title,
-      },
-      {
-        hid: 'twitterdescription',
-        property: 'twitter:description',
-        content: description,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

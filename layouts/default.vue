@@ -85,3 +85,19 @@
     <Nuxt />
   </div>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            process.env.baseUrl + require('~/assets/images/profile.jpeg'),
+        },
+      ],
+    }
+  },
+}
+</script>

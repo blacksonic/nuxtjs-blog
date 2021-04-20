@@ -118,14 +118,11 @@ export default {
           content: this.article.description,
         },
         {
-          hid: 'twittertitle',
-          property: 'twitter:title',
-          content: this.article.title,
-        },
-        {
-          hid: 'twitterdescription',
-          property: 'twitter:description',
-          content: this.article.description,
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            process.env.baseUrl +
+            require(`~/assets/images/${this.article.cover_image}`),
         },
       ],
     }
