@@ -4,7 +4,7 @@ dayjs.extend(relativeTime)
 
 const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
 const title = 'VuesomeDev'
-const description = `${title} - A blog about Javascript focused on Vue.js and Node.js`
+const description = 'A blog about Javascript focused on Vue.js and Node.js'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
