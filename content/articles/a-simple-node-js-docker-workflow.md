@@ -4,7 +4,7 @@ published_at: 2020-01-28
 description: Docker is a great tool that helps developers build, deploy, and run applications more efficiently in a standardized way. We can develop in the same environment as the app running in production.
 tags: docker, node, javascript, devops
 cover_image: a-simple-node-js-docker-workflow/header.png
-canonical_url: https://dev.to/emarsys/a-simple-node-js-docker-workflow-18dh
+canonical_url: https://sonicoder.com/blog/a-simple-node-js-docker-workflow
 ---
 
 Docker is a great tool that helps developers build, deploy, and run applications more efficiently in a standardized way. We can develop in the same environment as the app running in production. You can speed up the debugging or even the prevention of upcoming bugs by having the same setup locally. In the [previous post](https://dev.to/vuesomedev/frontend-development-with-docker-simplified-254i), I've written about a simplified way to use Docker for frontend development, and now I'll show the same for Node.js projects.

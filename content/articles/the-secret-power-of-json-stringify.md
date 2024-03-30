@@ -4,7 +4,7 @@ published_at: 2019-10-22
 description: There are many functions in Javascript that just work. We use them daily, but we don't know about their extra features. At one day, we look at its documentation and realize it has many more features then we have imagined.
 tags: javascript, webdev, beginner
 cover_image: the-secret-power-of-json-stringify/header.png
-canonical_url: https://dev.to/vuesomedev/the-secret-power-of-json-stringify-393b
+canonical_url: https://sonicoder.com/blog/the-secret-power-of-json-stringify
 ---
 
 There are many functions in Javascript that do their job. We use them daily, but we don't know about their extra features. At one day, we look at its documentation and realize it has many more features then we have imagined. The same thing has happened with `JSON.stringify` and me. In this short tutorial, I'll show you what I've learned.

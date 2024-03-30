@@ -4,7 +4,7 @@ published_at: 2019-10-10
 description: One upon a time, there was a significant upgrade to the Javascript language called ES6/ES2015. It introduced many different new features. One of them was the three consecutive dots that we can write in front of any compatible container (objects, arrays, strings, sets, maps).
 tags: javascript, webdev, beginner
 cover_image: the-tale-of-three-dots-in-javascript/header.png
-canonical_url: https://dev.to/vuesomedev/the-tale-of-three-dots-in-javascript-4287
+canonical_url: https://sonicoder.com/blog/the-tale-of-three-dots-in-javascript
 ---
 
 One upon a time, there was a significant upgrade to the Javascript language called ES6/ES2015. It introduced many different new features. One of them was the three consecutive dots that we can write in front of any compatible container (objects, arrays, strings, sets, maps). These tiny little dots enable us to write a more elegant and concise code. I'll explain how the three dots work and show the most common use-cases.

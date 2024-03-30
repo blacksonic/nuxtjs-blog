@@ -6,6 +6,11 @@
           <h2 class="title mb-2">{{ article.title }}</h2>
           <div class="meta mb-3">
             <span class="date">Published {{ article.ago }}</span>
+            <span v-if="article.canonical_url" class="date">
+              <a :href="article.canonical_url" target="_blank">
+                Originally published elsewhere
+              </a>
+            </span>
             <span class="time">{{ article.readingTime }}</span>
           </div>
         </header>
@@ -123,6 +128,13 @@ export default {
           content:
             process.env.baseUrl +
             require(`~/assets/images/${this.article.cover_image}`),
+        },
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: this.article.canonical_url,
         },
       ],
     }

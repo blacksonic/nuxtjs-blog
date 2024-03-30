@@ -4,7 +4,7 @@ published_at: 2019-12-17
 description: Test every aspect of your Vue app to stay bug-free and increase the trust in your code. Forget about the whack-a-mole game with bugs.
 tags: vue, javascript, testing
 cover_image: vue-testing-crash-course/header.png
-canonical_url: https://dev.to/emarsys/vue-testing-crash-course-59kl
+canonical_url: https://sonicoder.com/blog/vue-testing-crash-course
 ---
 
 You have nearly finished your project, and only one feature is left. You implement the last one, but bugs appear in different parts of the system. You fix them, but another one pops up. You start playing a whack-a-mole game, and after multiple turns, you feel messed up. But there is a solution, a life-saver that can make the project shine again: write tests for the future and already existing features. This guarantees that working features stay bug-free.

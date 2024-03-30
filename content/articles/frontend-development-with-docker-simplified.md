@@ -4,7 +4,7 @@ published_at: 2020-01-16
 description: For frontend applications, we only need the Docker image for local development, because we deploy it to a static hosting provider. In this case, can we live without a custom Docker image? Can we have the same development experience that we had without Docker?
 tags: docker, webdev, javascript, devops
 cover_image: frontend-development-with-docker-simplified/header.png
-canonical_url: https://dev.to/emarsys/frontend-development-with-docker-simplified-254i
+canonical_url: https://sonicoder.com/blog/frontend-development-with-docker-simplified
 ---
 
 Docker is a great tool that helps developers build, deploy, and run applications more efficiently in a standardized way. For frontend applications, we only need the Docker image for local development, because we deploy it to a static hosting provider. In this case, can we live without a custom Docker image? Can we have the same development experience that we had without Docker? Yes, it is easier than you think.
